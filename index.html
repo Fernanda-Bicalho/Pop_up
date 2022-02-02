@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Celke-Pop-ups</title>
+    <meta charset="utf-8" />
+    <style>
+      .popup {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        height: 180px;
+        padding: 15px;
+        border: solid 1px rgb(164, 219, 164);
+        background: rgb(91, 218, 223);
+        display: none;
+        border-radius: 50px;
+      }
+      .popup:hover {
+        background: rgb(160, 218, 218);
+        color: rgb(221, 241, 191);
+      }
+      .popup p:hover {
+        color: rgb(127, 184, 127);
+      }
+      .popup p {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function abrir() {
+        document.getElementById('popup').style.display = 'block'
+      }
+      function fechar() {
+        document.getElementById('popup').style.display = 'none'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="popup" class="popup">
+      <p>seu conteudo foi salvo !</p>
+    </div>
+
+    <!--ações para popup-->
+
+    <a href="javascript: abrir();">abrir pop-up</a><br />
+    <a href="javascript: fechar();">fechar pop-up</a><br />
+    <a href="#" onmouseover="abrir();">Passar o mouse para abrir</a><br />
+    <a href="#" onmouseover="fechar();">Passar o mouse para fechar</a><br />
+  </body>
+</html>
